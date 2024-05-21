@@ -38,4 +38,5 @@ function removeUnusedRowsCols() {
   );
 
   // TODO: clear formatting in padding row/col
+  // TODO: fix out of bounds error when last row/col has data
 }
