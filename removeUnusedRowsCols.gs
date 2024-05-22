@@ -15,25 +15,25 @@ function removeUnusedRowsCols() {
 
   // Get the active sheet
   var sheet = SpreadsheetApp.getActiveSheet();
-  
-  // Get the last used row/col, add one. These 
+
+  // Get the last used row/col, add one. These
   // are the first row/col to be deleted
   var firstRowToDelete = sheet.getLastRow() + 1;
   var firstColToDelete = sheet.getLastColumn() + 1;
-  
+
   // Get the last column and set width
   var maxCols = sheet.getMaxColumns();
   sheet.setColumnWidth(maxCols, 21);
 
   // Delete unuesed rows
   sheet.deleteRows(
-    firstRowToDelete, 
+    firstRowToDelete,
     sheet.getMaxRows() - firstRowToDelete
   );
 
   // Delete unused columns
   sheet.deleteColumns(
-    firstColToDelete, 
+    firstColToDelete,
     maxCols - firstColToDelete
   );
 
